@@ -23,7 +23,7 @@ public class Car {
         return progress;
     }
 
-    public void goOrStop(RandomNo randomNo) {
+    public void goForwardOrStop(RandomNo randomNo) {
         if (randomNo.ifMoveForwardNo()) {
             this.progress.addProgress();
         }

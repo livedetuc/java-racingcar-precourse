@@ -16,9 +16,9 @@ public class CarTest {
 	@Test
 	void 전진_3회() {
 		Car car = new Car("test");
-		car.goOrStop(new RandomNo(MOVING_FORWARD));
-		car.goOrStop(new RandomNo(MOVING_FORWARD));
-		car.goOrStop(new RandomNo(MOVING_FORWARD));
+		car.goForwardOrStop(new RandomNo(MOVING_FORWARD));
+		car.goForwardOrStop(new RandomNo(MOVING_FORWARD));
+		car.goForwardOrStop(new RandomNo(MOVING_FORWARD));
 
 		assertTrue(car.getProgress().isProgress(new Progress(3)));
 	}
@@ -26,9 +26,9 @@ public class CarTest {
 	@Test
 	void 멈춤_3회() {
 		Car car = new Car("test");
-		car.goOrStop(new RandomNo(STOP));
-		car.goOrStop(new RandomNo(STOP));
-		car.goOrStop(new RandomNo(STOP));
+		car.goForwardOrStop(new RandomNo(STOP));
+		car.goForwardOrStop(new RandomNo(STOP));
+		car.goForwardOrStop(new RandomNo(STOP));
 
 		assertTrue(car.getProgress().isProgress(new Progress(0)));
 	}
@@ -36,9 +36,9 @@ public class CarTest {
 	@Test
 	void 멈춤_2회_전진_1회() {
 		Car car = new Car("test");
-		car.goOrStop(new RandomNo(STOP));
-		car.goOrStop(new RandomNo(MOVING_FORWARD));
-		car.goOrStop(new RandomNo(STOP));
+		car.goForwardOrStop(new RandomNo(STOP));
+		car.goForwardOrStop(new RandomNo(MOVING_FORWARD));
+		car.goForwardOrStop(new RandomNo(STOP));
 
 		assertTrue(car.getProgress().isProgress(new Progress(1)));
 	}

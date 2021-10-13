@@ -56,7 +56,7 @@ public class CarRacingController {
 	}
 
 	private void move(Car car) {
-		car.goOrStop(new RandomNo());
+		car.goForwardOrStop(new RandomNo());
 		CarRacingView.printRacingProgress(car.getName().getName(), car.getProgress().getProgress());
 	}
 
