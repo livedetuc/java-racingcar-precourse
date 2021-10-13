@@ -22,6 +22,13 @@ public class Cars {
 		return cars;
 	}
 
+	public List<String> getNames() {
+		// return cars.stream().map(Car::getName).collect(Collectors.toList());
+		List<String> names = new ArrayList<>();
+		cars.forEach(car -> names.add(car.getName().getName()));
+		return names;
+	}
+
 	public void addCar(Car car) {
 		this.cars.add(car);
 	}

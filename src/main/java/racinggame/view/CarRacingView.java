@@ -45,4 +45,8 @@ public class CarRacingView {
 		String nameString = names.toString().replace("[", "").replace("]", "");
 		System.out.printf("최종 우승자는 %s 입니다.\n", nameString);
 	}
+
+	public static void printMessage(String message) {
+		System.out.println(message);
+	}
 }
